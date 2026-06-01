@@ -1,7 +1,27 @@
 # Copyright (c) 2025 Adam Karpierz
 # SPDX-License-Identifier: Zlib
 
-from ._nox_lib import *  # noqa
-__all__ = _nox_lib.__all__  # type: ignore[name-defined] # noqa: F405
-del _nox_lib  # type: ignore[name-defined] # noqa: F821
+__all__ = (
+    'prepare',
+    'cleanup',
+    'tests',
+    'coverage',
+    'docs',
+    'build',
+    'publish',
+    'typing',
+    'lint',
+    'util',
+)
 __dir__ = lambda: __all__
+
+from . import prepare
+from . import cleanup
+from . import tests
+from . import coverage
+from . import docs
+from . import build
+from . import publish
+from . import typing
+from . import lint
+from . import util

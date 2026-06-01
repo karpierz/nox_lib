@@ -3,6 +3,7 @@
 
 import unittest
 
+import nox
 import nox_lib
 
 
