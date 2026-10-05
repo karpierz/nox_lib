@@ -1,7 +1,7 @@
 nox_lib
 =======
 
-Utility functions and helpers for Nox.
+Nox sessions library.
 
 Overview
 ========
