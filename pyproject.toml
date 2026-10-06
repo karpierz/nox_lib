@@ -7,7 +7,7 @@ requires = [ "setuptools>=81.0.0", "packaging>=26.3.0" ]
 
 [project]
 name = "nox_lib"
-version = "0.5.0"
+version = "0.5.1"
 description = "Nox sessions library."
 keywords = [ "nox_lib", "nox-lib", "nox_ext", "nox-ext", "nox", "packaging" ]
 license = "Zlib"
@@ -54,7 +54,7 @@ dependencies = [
   "packaging>=26.3.0",
   # others
   "nox>=2026.7.11",
-  "nox_ext>=0.6.0",
+  "nox_ext>=0.6.1",
   "build>=1.6.1",
   "rich>=15.0.0",
 ]
@@ -62,7 +62,8 @@ dependencies = [
 [dependency-groups]
 base = [
   "pip>=26.2.1; platform_python_implementation!='GraalVM'",
-  "pip>=24.3.1; platform_python_implementation=='GraalVM'",
+  "pip>=26.1.2; platform_python_implementation=='GraalVM' and python_version~='3.13.0'",
+  "pip>=24.3.1; platform_python_implementation=='GraalVM' and python_version~='3.12.0'",
   "setuptools>=81.0.0",
 ]
 test = [
