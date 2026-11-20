@@ -7,7 +7,7 @@ requires = [ "setuptools>=81.0.0", "packaging>=26.3.0" ]
 
 [project]
 name = "nox_lib"
-version = "0.5.1"
+version = "0.5.2"
 description = "Nox sessions library."
 keywords = [ "nox_lib", "nox-lib", "nox_ext", "nox-ext", "nox", "packaging" ]
 license = "Zlib"
@@ -53,15 +53,15 @@ dependencies = [
   "typing-extensions>=4.16.0",
   "packaging>=26.3.0",
   # others
-  "nox>=2026.7.11",
-  "nox_ext>=0.6.1",
+  "nox>=2026.10.20",
+  "nox_ext>=0.6.2",
   "build>=1.6.1",
   "rich>=15.0.0",
 ]
 
 [dependency-groups]
 base = [
-  "pip>=26.2.1; platform_python_implementation!='GraalVM'",
+  "pip>=26.3.0; platform_python_implementation!='GraalVM'",
   "pip>=26.1.2; platform_python_implementation=='GraalVM' and python_version~='3.13.0'",
   "pip>=24.3.1; platform_python_implementation=='GraalVM' and python_version~='3.12.0'",
   "setuptools>=81.0.0",
@@ -73,9 +73,9 @@ test = [
 ]
 coverage = [
   { include-group = "test" },
-  "coverage>=7.16.2",
+  "coverage>=7.17.3",
   "covdefaults>=2.3.0",
-  "diff-cover>=10.6.0",
+  "diff-cover>=11.0.4",
 ]
 docs = [
   { include-group = "base" },
@@ -101,21 +101,21 @@ build = [
 publish = [
   "twine>=7.0.0",
 ]
-typing = [
-  { include-group = "base" },
-  "mypy>=2.4.0",
-  "mypy-extensions>=1.1.0",
-  "types-setuptools>=81.0.0.20260209",
-]
 lint = [
   { include-group = "test" },
-  "flake8>=7.4.1",
+  "flake8>=7.5.0",
   "flake8-in-file-ignores>=0.3.0",
   "flake8-pyproject>=1.2.4",
   "flake8-docstrings>=1.7.0",
   "pep8-naming>=0.15.1",
-  "flake8-builtins>=3.1.0",
-  "flake8-deprecated>=2.3.0",
+  "flake8-builtins>=3.2.0",
+  "flake8-deprecated>=2.4.0",
+]
+typing = [
+  { include-group = "base" },
+  "mypy>=2.4.1",
+  "mypy-extensions>=1.2.0",
+  "types-setuptools>=81.0.0.20260209",
 ]
 
 [tool.setuptools]
@@ -127,7 +127,7 @@ packages.find.namespaces = false
 packages.find.where = [ "src" ]
 package-dir."" = "src"
 # package-dir."nox_lib.tests" = "tests"
-package-data.nox_lib = [
+package-data."nox_lib" = [
 ]
 exclude-package-data."*" = [
   "*.c",   "*.h",
@@ -135,7 +135,7 @@ exclude-package-data."*" = [
   "*.cxx", "*.hxx",
   "*.pyx", "*.pxd",
 ]
-exclude-package-data.nox_lib = [
+exclude-package-data."nox_lib" = [
 ]
 
 [tool.coverage]

@@ -1,6 +1,8 @@
 # Copyright (c) 2025 Adam Karpierz
 # SPDX-License-Identifier: Zlib
 
-from ._pypi        import *
-from ._gh_pages    import *
-from ._readthedocs import *
+from __future__ import annotations
+
+from ._pypi        import *  # noqa: F401, F403
+from ._gh_pages    import *  # noqa: F401, F403
+from ._readthedocs import *  # noqa: F401, F403

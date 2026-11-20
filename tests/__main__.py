@@ -1,13 +1,13 @@
 # Copyright (c) 2025 Adam Karpierz
 # SPDX-License-Identifier: Zlib
 
+from __future__ import annotations
+
 import unittest
 import sys
 import logging
 
 from . import test_dir, top_dir
-
-log = logging.getLogger(__name__)
 
 
 def main(argv=sys.argv[1:]):

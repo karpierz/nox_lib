@@ -3,7 +3,9 @@
 
 # Helpers & Utils
 
-__all__ = ('nox', 'nox_ext', 'Path', 'copytree', 'rmtree')
+from __future__ import annotations
+
+__all__ = ("nox", "nox_ext", "Path", "copytree", "rmtree")
 
 from pathlib import Path
 from functools import partial

@@ -1,11 +1,16 @@
+# flake8-in-file-ignores: noqa: F403,F405
+
 # Copyright (c) 2025 Adam Karpierz
 # SPDX-License-Identifier: Zlib
+
+from __future__ import annotations
 
 __all__ = ('coverage',)
 
 from ..util import *
 
-def coverage(session: nox.Session, *,
+
+def coverage(session: nox_ext.Session, *,
              tests_module: str = "tests") -> None:
     env_dir = Path(session.virtualenv.location)
     data_file = env_dir/".coverage"

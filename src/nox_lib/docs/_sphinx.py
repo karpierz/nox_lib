@@ -1,11 +1,16 @@
+# flake8-in-file-ignores: noqa: F403,F405
+
 # Copyright (c) 2025 Adam Karpierz
 # SPDX-License-Identifier: Zlib
+
+from __future__ import annotations
 
 __all__ = ('sphinx',)
 
 from ..util import *
 
-def sphinx(session: nox.Session, *,
+
+def sphinx(session: nox_ext.Session, *,
            docs_dir: Path | str = "docs",
            html_dir: Path | str = "build/docs/html",
            with_doctests: bool = True,

@@ -1,17 +1,19 @@
 # Copyright (c) 2025 Adam Karpierz
 # SPDX-License-Identifier: Zlib
 
+from __future__ import annotations
+
 __all__ = (
-    'prepare',
-    'cleanup',
-    'tests',
-    'coverage',
-    'docs',
-    'build',
-    'publish',
-    'typing',
-    'lint',
-    'util',
+    "prepare",
+    "cleanup",
+    "tests",
+    "coverage",
+    "docs",
+    "build",
+    "publish",
+    "typing",
+    "lint",
+    "util",
 )
 __dir__ = lambda: __all__
 

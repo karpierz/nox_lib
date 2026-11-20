@@ -1,9 +1,14 @@
 Changelog
 =========
 
+0.5.2 (2026-11-20)
+------------------
+- 100% code linting.
+- Setup update (nox>=2026.10.20).
+
 0.5.1 (2026-10-05)
 ------------------
-- Added support for GraalPy 3.12
+- Added support for GraalPy 3.13
 
 0.5.0 (2026-10-03)
 ------------------

@@ -1,11 +1,16 @@
+# flake8-in-file-ignores: noqa: F403,F405
+
 # Copyright (c) 2025 Adam Karpierz
 # SPDX-License-Identifier: Zlib
+
+from __future__ import annotations
 
 __all__ = ('docs_on_gh_pages',)
 
 from ..util import *
 
-def docs_on_gh_pages(session: nox.Session, *,
+
+def docs_on_gh_pages(session: nox_ext.Session, *,
                      html_dir: Path | str = "build/docs/html") -> None:
     # Publish documentation on GitHub Pages
     root = session.root_dir
@@ -20,7 +25,7 @@ def docs_on_gh_pages(session: nox.Session, *,
     # clean old docs
     (gh_pages_dir/".nojekyll").touch()
     for fpath in gh_pages_dir.iterdir():
-        if fpath.name not in (".git",".nojekyll"):
+        if fpath.name not in (".git", ".nojekyll"):
             if fpath.is_dir():
                 rmtree(fpath)
             else:
